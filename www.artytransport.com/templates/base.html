@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}/boomerang/assets/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"> 
      
     <!-- Boomerang styles -->
-        <link id="wpStylesheet" type="text/css" href="{{ STATIC_URL }}/boomerang/css/global-style.css" rel="stylesheet" media="screen">
+        <link id="wpStylesheet" type="text/css" href="{{ STATIC_URL }}/boomerang/css/global-style-red.css" rel="stylesheet" media="screen">
         
 
     <!-- Favicon -->
@@ -76,13 +76,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown dropdown-meganav mega-dropdown-fluid">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                        <a href="/index.html" class="dropdown-toggle" data-toggle="dropdown">Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+                        <a href="/contact.html" class="dropdown-toggle" data-toggle="dropdown">Contact  Us</a>
                     </li>
 
                 </ul>
@@ -191,9 +188,8 @@
 <script src="{{ STATIC_URL }}/boomerang/assets/bootstrap/js/popover.js"></script>
 
 <!-- Sripts for individual pages, depending on what plug-ins are used -->
-<script src="{{ STATIC_URL }}/boomerang/assets/layerslider/js/greensock.js" type="text/javascript"></script>
-<script src="{{ STATIC_URL }}/boomerang/assets/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
-<script src="{{ STATIC_URL }}/boomerang/assets/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+{% block pagescripts %}
+{% endblock %}
 <!-- Initializing the slider -->
 <script>
     jQuery("#layerslider").layerSlider({
